@@ -1,0 +1,43 @@
+##################################################################################
+#  	Purpose:                                                                     #
+#																				 #
+#  																				 #
+#Change History    																 #
+#                                                                                #
+# Date	     		Author	  		Comment                                      #
+# ---------+--------+-----------+---------------------------------------------   #
+# 01-JULY-19  	    Vijay       	Created                                      #
+#                                                                                #
+# ---------+--------+-----------+---------------------------------------------   #
+##################################################################################
+
+# Lookup Key-Value Pairs
+PATIDTYPES,NH,NHS
+PATIDTYPES,MR,PAS
+PATIDTYPES,FACIL,FACIL
+SEX,M,M
+SEX,F,F
+SEX,X,X
+SEX,U,U
+SUBDISCIPLINE,A,A
+SUBDISCIPLINE,HIST,H
+SUBDISCIPLINE,Y,N
+
+# Global Configurations / Switches
+GLOBALCONFIG,NHS_IDTYPE,NHS
+GLOBALCONFIG,PAS_IDTYPE,PAS
+GLOBALCONFIG,FACIL_IDTYPE,FACIL
+GLOBALCONFIG,MAIN_IDTYPE,PAS
+GLOBALCONFIG,TELECOM_HOME,PRN
+GLOBALCONFIG,TELECOM_WORK,WPN
+GLOBALCONFIG,TELECOM_NET,NET
+GLOBALCONFIG,OB_SENDAPP,SEND_APP
+GLOBALCONFIG,OB_SENDFACIL,SEND_FACIL
+GLOBALCONFIG,OB_RCVAPP,REC_APP
+GLOBALCONFIG,OB_RCVFACIL,REC_FACIL
+GLOBALCONFIG,DEF_CLINICIAN,GMC0001
+GLOBALCONFIG,DEF_LOCATION,DLF
+GLOBALCONFIG,DEF_CATEGORY,NHS
+GLOBALCONFIG,DEF_SEX,U
+GLOBALCONFIG,DEF_GENDER,X
+GLOBALCONFIG,LOGPATH,C:\Viaduct_Test\LIMS_logs

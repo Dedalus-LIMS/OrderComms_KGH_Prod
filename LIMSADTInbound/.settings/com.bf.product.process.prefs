@@ -1,0 +1,5 @@
+deploy.process.instances.LIMSADTInbound=1
+deploy.profiles=DEDALUS_LIMS
+deploy.profiles.connector.DEDALUS_LIMS=LIMS_ERR_Connector,LIMS_PROC_ERR_PROC_OUT|LIMS_ADT_Q_OUT,LIMS_ADT_Q_OUT|LIMS_ACK_Q_OUT,LIMS_ACK_Q_OUT|LIMS_ITV_Q_OUT,LIMS_ITV_Q_OUT|LIMS_ADT_Error_Log,LIMS_ADT_ERR_LOG|LIMS_ADT_LOG,LIMS_ADT_LOG|
+deploy.profiles.listeners.DEDALUS_LIMS=LIMS_FAN_ADT_Q_IN
+eclipse.preferences.version=1

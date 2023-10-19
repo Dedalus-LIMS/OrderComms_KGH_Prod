@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions name="Outbound" targetNamespace="http://tempuri.org/Outbound" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/Outbound" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<wsdl:types>
+		<xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/Outbound" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+			<xs:import namespace="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/>
+			<xs:import namespace="http://schemas.datacontract.org/2004/07/iLaboratoryBusinessObjects.Models.BloodSciences"/>
+			<xs:element name="ExtractLimsData">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="Count" type="xs:int"/>
+						<xs:element minOccurs="0" name="IncludeFailed" type="xs:boolean"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ExtractLimsDataResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="ExtractLimsDataResult" nillable="true" type="q1:ArrayOfExtractLimsDataResponse" xmlns:q1="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="UpdateExtractStatus">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="request" nillable="true" type="q2:UpdateExtractStatus" xmlns:q2="http://schemas.datacontract.org/2004/07/iLaboratoryBusinessObjects.Models.BloodSciences"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="UpdateExtractStatusResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="UpdateExtractStatusResult" nillable="true" type="q3:UpdateExtractStatusResponse" xmlns:q3="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+		<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+			<xs:element name="anyType" nillable="true" type="xs:anyType"/>
+			<xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+			<xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+			<xs:element name="boolean" nillable="true" type="xs:boolean"/>
+			<xs:element name="byte" nillable="true" type="xs:byte"/>
+			<xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+			<xs:element name="decimal" nillable="true" type="xs:decimal"/>
+			<xs:element name="double" nillable="true" type="xs:double"/>
+			<xs:element name="float" nillable="true" type="xs:float"/>
+			<xs:element name="int" nillable="true" type="xs:int"/>
+			<xs:element name="long" nillable="true" type="xs:long"/>
+			<xs:element name="QName" nillable="true" type="xs:QName"/>
+			<xs:element name="short" nillable="true" type="xs:short"/>
+			<xs:element name="string" nillable="true" type="xs:string"/>
+			<xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+			<xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+			<xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+			<xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+			<xs:element name="char" nillable="true" type="tns:char"/>
+			<xs:simpleType name="char">
+				<xs:restriction base="xs:int"/>
+			</xs:simpleType>
+			<xs:element name="duration" nillable="true" type="tns:duration"/>
+			<xs:simpleType name="duration">
+				<xs:restriction base="xs:duration">
+					<xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+					<xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+					<xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:element name="guid" nillable="true" type="tns:guid"/>
+			<xs:simpleType name="guid">
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:attribute name="FactoryType" type="xs:QName"/>
+			<xs:attribute name="Id" type="xs:ID"/>
+			<xs:attribute name="Ref" type="xs:IDREF"/>
+		</xs:schema>
+		<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices">
+			<xs:complexType name="ArrayOfExtractLimsDataResponse">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="ExtractLimsDataResponse" nillable="true" type="tns:ExtractLimsDataResponse"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfExtractLimsDataResponse" nillable="true" type="tns:ArrayOfExtractLimsDataResponse"/>
+			<xs:complexType name="ExtractLimsDataResponse">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Discipline" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="ID" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="MessageDirection" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="MessageIDReference" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="MessageType" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="PatientId" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="RequestData" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="ResponseData" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Status" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="TransactionDateTime" type="xs:dateTime"/>
+					<xs:element minOccurs="0" name="TransactionType" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ExtractLimsDataResponse" nillable="true" type="tns:ExtractLimsDataResponse"/>
+			<xs:complexType name="UpdateExtractStatusResponse">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Message" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="MessageID" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Status" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="UpdateExtractStatusResponse" nillable="true" type="tns:UpdateExtractStatusResponse"/>
+		</xs:schema>
+		<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/iLaboratoryBusinessObjects.Models.BloodSciences" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/iLaboratoryBusinessObjects.Models.BloodSciences">
+			<xs:complexType name="UpdateExtractStatus">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="MessageID" nillable="true" type="xs:int"/>
+					<xs:element minOccurs="0" name="Status" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="UpdateExtractStatus" nillable="true" type="tns:UpdateExtractStatus"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="IOutbound_ExtractLimsData_InputMessage">
+		<wsdl:part name="parameters" element="tns:ExtractLimsData"/>
+	</wsdl:message>
+	<wsdl:message name="IOutbound_ExtractLimsData_OutputMessage">
+		<wsdl:part name="parameters" element="tns:ExtractLimsDataResponse"/>
+	</wsdl:message>
+	<wsdl:message name="IOutbound_UpdateExtractStatus_InputMessage">
+		<wsdl:part name="parameters" element="tns:UpdateExtractStatus"/>
+	</wsdl:message>
+	<wsdl:message name="IOutbound_UpdateExtractStatus_OutputMessage">
+		<wsdl:part name="parameters" element="tns:UpdateExtractStatusResponse"/>
+	</wsdl:message>
+	<wsdl:portType name="IOutbound">
+		<wsdl:operation name="ExtractLimsData">
+			<wsdl:input wsaw:Action="http://tempuri.org/Outbound/IOutbound/ExtractLimsData" message="tns:IOutbound_ExtractLimsData_InputMessage"/>
+			<wsdl:output wsaw:Action="http://tempuri.org/Outbound/IOutbound/ExtractLimsDataResponse" message="tns:IOutbound_ExtractLimsData_OutputMessage"/>
+		</wsdl:operation>
+		<wsdl:operation name="UpdateExtractStatus">
+			<wsdl:input wsaw:Action="http://tempuri.org/Outbound/IOutbound/UpdateExtractStatus" message="tns:IOutbound_UpdateExtractStatus_InputMessage"/>
+			<wsdl:output wsaw:Action="http://tempuri.org/Outbound/IOutbound/UpdateExtractStatusResponse" message="tns:IOutbound_UpdateExtractStatus_OutputMessage"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="BasicHttpBinding_IOutbound" type="tns:IOutbound">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="ExtractLimsData">
+			<soap:operation soapAction="http://tempuri.org/Outbound/IOutbound/ExtractLimsData" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="UpdateExtractStatus">
+			<soap:operation soapAction="http://tempuri.org/Outbound/IOutbound/UpdateExtractStatus" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="Outbound">
+		<wsdl:port name="BasicHttpBinding_IOutbound" binding="tns:BasicHttpBinding_IOutbound">
+			<soap:address location="http://localhost/LIMS.Interfaces.WebServices/Outbound.svc"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,5 @@
+deploy.process.instances.OrderSendHL7ORM=1
+deploy.profiles=,DEDALUS_LIMS
+deploy.profiles.connector.DEDALUS_LIMS=LIMS_HL7_ORM_OUT,LIMS_Order_ORM_Out|PORT_LOG,LIMS_PORT_LOG|LIMS_Error_Connector,LIMS_PROC_ERR_PROC_OUT|LIMS_Order_OB_ORM_LOG,LIMS_Order_OB_ORM_LOG|
+deploy.profiles.listeners.DEDALUS_LIMS=LIMS_ORM_IN_Q
+eclipse.preferences.version=1

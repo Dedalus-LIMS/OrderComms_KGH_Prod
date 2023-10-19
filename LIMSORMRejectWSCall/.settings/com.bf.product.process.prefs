@@ -1,0 +1,5 @@
+deploy.process.instances.LIMSORMRejectWSCall=1
+deploy.profiles=,DEDALUS_LIMS
+deploy.profiles.connector.DEDALUS_LIMS=LIMS_ERR_Connector,LIMS_PROC_ERR_PROC_OUT|LIMS_ORM_REJ_WS,LIMS_ORM_REJ_WS|LIMS_ORM_OUT_HL7,LIMS_Order_ORM_Out|
+deploy.profiles.listeners.DEDALUS_LIMS=LIMS_Order_REJ_OB_Q_IN
+eclipse.preferences.version=1

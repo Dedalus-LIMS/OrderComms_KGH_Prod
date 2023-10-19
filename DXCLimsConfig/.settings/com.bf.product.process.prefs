@@ -1,0 +1,4 @@
+deploy.process.instances.DXCLimsConfig=1
+deploy.profiles=DEDALUS_LIMS
+deploy.profiles.listeners.DEDALUS_LIMS=LIMS_CSV_FILE_IN
+eclipse.preferences.version=1

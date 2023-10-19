@@ -1,0 +1,5 @@
+deploy.process.instances.AcknowledgementSend=1
+deploy.profiles=DEDALUS_LIMS
+deploy.profiles.connector.DEDALUS_LIMS=LIMS_PORT_LOG,LIMS_PORT_LOG|LIMS_ACK_OB_LOG,LIMS_OB_LOG|
+deploy.profiles.listeners.DEDALUS_LIMS=LIMS_ACK_IN_Q
+eclipse.preferences.version=1

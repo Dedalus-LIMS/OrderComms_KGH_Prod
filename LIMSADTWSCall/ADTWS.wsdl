@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="Inbound" targetNamespace="http://tempuri.org/Inbound" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:tns="http://tempuri.org/Inbound" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/Inbound" xmlns:xs="http://www.w3.org/2001/XMLSchema"><xs:import namespace="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/><xs:element name="RegisterPatientDetails"><xs:complexType><xs:sequence><xs:element minOccurs="0" name="request" nillable="true" type="q1:RegisterPatientDetailsRequest" xmlns:q1="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/></xs:sequence></xs:complexType></xs:element><xs:element name="RegisterPatientDetailsResponse"><xs:complexType><xs:sequence><xs:element minOccurs="0" name="RegisterPatientDetailsResult" nillable="true" type="q2:InboundResponse" xmlns:q2="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/></xs:sequence></xs:complexType></xs:element><xs:element name="RegisterOrderDetails"><xs:complexType><xs:sequence><xs:element minOccurs="0" name="request" nillable="true" type="q3:OrderEntryDetailsRequest" xmlns:q3="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/></xs:sequence></xs:complexType></xs:element><xs:element name="RegisterOrderDetailsResponse"><xs:complexType><xs:sequence><xs:element minOccurs="0" name="RegisterOrderDetailsResult" nillable="true" type="q4:InboundResponse" xmlns:q4="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/></xs:sequence></xs:complexType></xs:element><xs:element name="RegisterMergeDetails"><xs:complexType><xs:sequence><xs:element minOccurs="0" name="request" nillable="true" type="q5:MergePatientDetailsRequest" xmlns:q5="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/></xs:sequence></xs:complexType></xs:element><xs:element name="RegisterMergeDetailsResponse"><xs:complexType><xs:sequence><xs:element minOccurs="0" name="RegisterMergeDetailsResult" nillable="true" type="q6:InboundResponse" xmlns:q6="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/></xs:sequence></xs:complexType></xs:element><xs:element name="RegisterRejectedPatientDetails"><xs:complexType><xs:sequence><xs:element minOccurs="0" name="request" nillable="true" type="q7:RegisterRejectedPatientDetailsRequest" xmlns:q7="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/></xs:sequence></xs:complexType></xs:element><xs:element name="RegisterRejectedPatientDetailsResponse"><xs:complexType><xs:sequence/></xs:complexType></xs:element><xs:element name="RegisterRejectedOrderDetails"><xs:complexType><xs:sequence><xs:element minOccurs="0" name="request" nillable="true" type="q8:RegisterRejectedPatientDetailsRequest" xmlns:q8="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/></xs:sequence></xs:complexType></xs:element><xs:element name="RegisterRejectedOrderDetailsResponse"><xs:complexType><xs:sequence/></xs:complexType></xs:element><xs:element name="UpdateStock"><xs:complexType><xs:sequence><xs:element minOccurs="0" name="request" nillable="true" type="q9:UpdateStockDetails" xmlns:q9="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/></xs:sequence></xs:complexType></xs:element><xs:element name="UpdateStockResponse"><xs:complexType><xs:sequence><xs:element minOccurs="0" name="UpdateStockResult" nillable="true" type="q10:UpdateStockResponse" xmlns:q10="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/></xs:sequence></xs:complexType></xs:element><xs:element name="PatientDemographics"><xs:complexType><xs:sequence><xs:element minOccurs="0" name="request" nillable="true" type="q11:PatientIdentityQuery" xmlns:q11="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/></xs:sequence></xs:complexType></xs:element><xs:element name="PatientDemographicsResponse"><xs:complexType><xs:sequence><xs:element minOccurs="0" name="PatientDemographicsResult" nillable="true" type="q12:PatientIdentityResponse" xmlns:q12="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/></xs:sequence></xs:complexType></xs:element><xs:element name="ReturnToStock"><xs:complexType><xs:sequence><xs:element minOccurs="0" name="request" nillable="true" type="q13:ReturnToStockRequest" xmlns:q13="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/></xs:sequence></xs:complexType></xs:element><xs:element name="ReturnToStockResponse"><xs:complexType><xs:sequence><xs:element minOccurs="0" name="ReturnToStockResult" nillable="true" type="q14:ReturnToStockResponse" xmlns:q14="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/></xs:sequence></xs:complexType></xs:element><xs:element name="CrossMatch"><xs:complexType><xs:sequence><xs:element minOccurs="0" name="request" nillable="true" type="q15:CrossMatchRequest" xmlns:q15="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/></xs:sequence></xs:complexType></xs:element><xs:element name="CrossMatchResponse"><xs:complexType><xs:sequence><xs:element minOccurs="0" name="CrossMatchResult" nillable="true" type="q16:CrossMatchResponse" xmlns:q16="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/></xs:sequence></xs:complexType></xs:element><xs:element name="RemoteAllocation"><xs:complexType><xs:sequence><xs:element minOccurs="0" name="request" nillable="true" type="q17:RemoteAllocationQuery" xmlns:q17="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/></xs:sequence></xs:complexType></xs:element><xs:element name="RemoteAllocationResponse"><xs:complexType><xs:sequence><xs:element minOccurs="0" name="RemoteAllocationResult" nillable="true" type="q18:RemoteAllocationResponse" xmlns:q18="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/></xs:sequence></xs:complexType></xs:element><xs:element name="ElectronicCrossMatch"><xs:complexType><xs:sequence><xs:element minOccurs="0" name="request" nillable="true" type="q19:ElectronicCrossMatchQuery" xmlns:q19="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/></xs:sequence></xs:complexType></xs:element><xs:element name="ElectronicCrossMatchResponse"><xs:complexType><xs:sequence><xs:element minOccurs="0" name="ElectronicCrossMatchResult" nillable="true" type="q20:ElectronicCrossMatchResponse" xmlns:q20="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/></xs:sequence></xs:complexType></xs:element><xs:element name="StockTransfer"><xs:complexType><xs:sequence><xs:element minOccurs="0" name="request" nillable="true" type="q21:StockTransferRequest" xmlns:q21="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/></xs:sequence></xs:complexType></xs:element><xs:element name="StockTransferResponse"><xs:complexType><xs:sequence><xs:element minOccurs="0" name="StockTransferResult" nillable="true" type="q22:StockTransferResponse" xmlns:q22="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/></xs:sequence></xs:complexType></xs:element></xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema"><xs:element name="anyType" nillable="true" type="xs:anyType"/><xs:element name="anyURI" nillable="true" type="xs:anyURI"/><xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/><xs:element name="boolean" nillable="true" type="xs:boolean"/><xs:element name="byte" nillable="true" type="xs:byte"/><xs:element name="dateTime" nillable="true" type="xs:dateTime"/><xs:element name="decimal" nillable="true" type="xs:decimal"/><xs:element name="double" nillable="true" type="xs:double"/><xs:element name="float" nillable="true" type="xs:float"/><xs:element name="int" nillable="true" type="xs:int"/><xs:element name="long" nillable="true" type="xs:long"/><xs:element name="QName" nillable="true" type="xs:QName"/><xs:element name="short" nillable="true" type="xs:short"/><xs:element name="string" nillable="true" type="xs:string"/><xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/><xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/><xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/><xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/><xs:element name="char" nillable="true" type="tns:char"/><xs:simpleType name="char"><xs:restriction base="xs:int"/></xs:simpleType><xs:element name="duration" nillable="true" type="tns:duration"/><xs:simpleType name="duration"><xs:restriction base="xs:duration"><xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/><xs:minInclusive value="-P10675199DT2H48M5.4775808S"/><xs:maxInclusive value="P10675199DT2H48M5.4775807S"/></xs:restriction></xs:simpleType><xs:element name="guid" nillable="true" type="tns:guid"/><xs:simpleType name="guid"><xs:restriction base="xs:string"><xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/></xs:restriction></xs:simpleType><xs:attribute name="FactoryType" type="xs:QName"/><xs:attribute name="Id" type="xs:ID"/><xs:attribute name="Ref" type="xs:IDREF"/></xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices" xmlns:tns="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices" xmlns:xs="http://www.w3.org/2001/XMLSchema"><xs:import namespace="http://schemas.datacontract.org/2004/07/iLaboratoryBusinessObjects.UIModel.BloodTransfusion"/><xs:complexType name="RegisterPatientDetailsRequest"><xs:sequence><xs:element minOccurs="0" name="MessageID" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="MessageType" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="RegisterPatientDetails" nillable="true" type="tns:Patient"/><xs:element minOccurs="0" name="SendingApp" nillable="true" type="xs:string"/></xs:sequence></xs:complexType><xs:element name="RegisterPatientDetailsRequest" nillable="true" type="tns:RegisterPatientDetailsRequest"/><xs:complexType name="Patient"><xs:sequence><xs:element minOccurs="0" name="Address" nillable="true" type="tns:ArrayOfAddress"/><xs:element minOccurs="0" name="AkaNames" nillable="true" type="tns:ArrayOfPatientAkaDetails"/><xs:element minOccurs="0" name="CurrentLocationCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="DateOfBirth" type="xs:dateTime"/><xs:element minOccurs="0" name="DateOfDeath" type="xs:dateTime"/><xs:element minOccurs="0" name="Email" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Ethnicity" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="FamilyName" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="GivenName" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Home" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="MaidenName" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="MiddleName" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Mobile" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="NHSNumber" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="PASNumber" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="PatientIdentifiers" nillable="true" type="tns:ArrayOfPatientIdentifiers"/><xs:element minOccurs="0" name="RegisteredGP" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Sex" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Title" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="WorkExtn" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="WorkNumber" nillable="true" type="xs:string"/></xs:sequence></xs:complexType><xs:element name="Patient" nillable="true" type="tns:Patient"/><xs:complexType name="ArrayOfAddress"><xs:sequence><xs:element maxOccurs="unbounded" minOccurs="0" name="Address" nillable="true" type="tns:Address"/></xs:sequence></xs:complexType><xs:element name="ArrayOfAddress" nillable="true" type="tns:ArrayOfAddress"/><xs:complexType name="Address"><xs:sequence><xs:element minOccurs="0" name="City" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Country" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Line1" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Line2" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Line3" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Postcode" nillable="true" type="xs:string"/></xs:sequence></xs:complexType><xs:element name="Address" nillable="true" type="tns:Address"/><xs:complexType name="ArrayOfPatientAkaDetails"><xs:sequence><xs:element maxOccurs="unbounded" minOccurs="0" name="PatientAkaDetails" nillable="true" type="tns:PatientAkaDetails"/></xs:sequence></xs:complexType><xs:element name="ArrayOfPatientAkaDetails" nillable="true" type="tns:ArrayOfPatientAkaDetails"/><xs:complexType name="PatientAkaDetails"><xs:sequence><xs:element minOccurs="0" name="FamilyName" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="GivenName" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="MiddleName" nillable="true" type="xs:string"/></xs:sequence></xs:complexType><xs:element name="PatientAkaDetails" nillable="true" type="tns:PatientAkaDetails"/><xs:complexType name="ArrayOfPatientIdentifiers"><xs:sequence><xs:element maxOccurs="unbounded" minOccurs="0" name="PatientIdentifiers" nillable="true" type="tns:PatientIdentifiers"/></xs:sequence></xs:complexType><xs:element name="ArrayOfPatientIdentifiers" nillable="true" type="tns:ArrayOfPatientIdentifiers"/><xs:complexType name="PatientIdentifiers"><xs:sequence><xs:element minOccurs="0" name="Code" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Identifier" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="MainIdentifier" type="xs:boolean"/></xs:sequence></xs:complexType><xs:element name="PatientIdentifiers" nillable="true" type="tns:PatientIdentifiers"/><xs:complexType name="InboundResponse"><xs:sequence><xs:element minOccurs="0" name="Message" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="MessageCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="MessageID" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="MessageType" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Status" nillable="true" type="xs:string"/></xs:sequence></xs:complexType><xs:element name="InboundResponse" nillable="true" type="tns:InboundResponse"/><xs:complexType name="OrderEntryDetailsRequest"><xs:sequence><xs:element minOccurs="0" name="MessageID" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="MessageType" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Order" nillable="true" type="tns:Order"/><xs:element minOccurs="0" name="RegisterPatientDetails" nillable="true" type="tns:Patient"/><xs:element minOccurs="0" name="SendingApp" nillable="true" type="xs:string"/></xs:sequence></xs:complexType><xs:element name="OrderEntryDetailsRequest" nillable="true" type="tns:OrderEntryDetailsRequest"/><xs:complexType name="Order"><xs:sequence><xs:element minOccurs="0" name="CancelComments" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="DateOfLastTest" type="xs:dateTime"/><xs:element minOccurs="0" name="EDD" type="xs:dateTime"/><xs:element minOccurs="0" name="ExternalID" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="ExternalOrderReference" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="LMP" type="xs:dateTime"/><xs:element minOccurs="0" name="OrderComments" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="OrderControl" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="OrderDateTime" type="xs:dateTime"/><xs:element minOccurs="0" name="OrderSpecimen" nillable="true" type="tns:ArrayOfOrderSpecimen"/><xs:element minOccurs="0" name="PatientCategoryCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="PlacerGroup" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Pregnant" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="RequestingClinicianCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="RequestingLocationCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="SampleTakerCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="StatusCode" nillable="true" type="xs:string"/></xs:sequence></xs:complexType><xs:element name="Order" nillable="true" type="tns:Order"/><xs:complexType name="ArrayOfOrderSpecimen"><xs:sequence><xs:element maxOccurs="unbounded" minOccurs="0" name="OrderSpecimen" nillable="true" type="tns:OrderSpecimen"/></xs:sequence></xs:complexType><xs:element name="ArrayOfOrderSpecimen" nillable="true" type="tns:ArrayOfOrderSpecimen"/><xs:complexType name="OrderSpecimen"><xs:sequence><xs:element minOccurs="0" name="CollectionDateTime" type="xs:dateTime"/><xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="DisciplineCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="DisciplineID" type="xs:int"/><xs:element minOccurs="0" name="ExternalSampleNumber" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Fasting" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="IOEID" type="xs:int"/><xs:element minOccurs="0" name="OrderItem" nillable="true" type="tns:ArrayOfOrderItem"/><xs:element minOccurs="0" name="PriorityCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="PriorityID" type="xs:int"/><xs:element minOccurs="0" name="ReceivedDateTime" type="xs:dateTime"/><xs:element minOccurs="0" name="SampleTaker" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="SpecimenTypeCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="SpecimenTypeID" type="xs:int"/><xs:element minOccurs="0" name="SubDisciplineCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="SubDisciplineID" type="xs:int"/></xs:sequence></xs:complexType><xs:element name="OrderSpecimen" nillable="true" type="tns:OrderSpecimen"/><xs:complexType name="ArrayOfOrderItem"><xs:sequence><xs:element maxOccurs="unbounded" minOccurs="0" name="OrderItem" nillable="true" type="tns:OrderItem"/></xs:sequence></xs:complexType><xs:element name="ArrayOfOrderItem" nillable="true" type="tns:ArrayOfOrderItem"/><xs:complexType name="OrderItem"><xs:sequence><xs:element minOccurs="0" name="ItemCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="ItemType" nillable="true" type="xs:string"/></xs:sequence></xs:complexType><xs:element name="OrderItem" nillable="true" type="tns:OrderItem"/><xs:complexType name="MergePatientDetailsRequest"><xs:sequence><xs:element minOccurs="0" name="MergePrimaryPatientsIdentifiers" nillable="true" type="tns:ArrayOfMergePatientsIdentifiers"/><xs:element minOccurs="0" name="MergeSecondaryPatientsIdentifiers" nillable="true" type="tns:ArrayOfMergePatientsIdentifiers"/><xs:element minOccurs="0" name="MessageID" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="MessageType" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="PatientName" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="SendingApp" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Status" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="isFromInterface" type="xs:boolean"/></xs:sequence></xs:complexType><xs:element name="MergePatientDetailsRequest" nillable="true" type="tns:MergePatientDetailsRequest"/><xs:complexType name="ArrayOfMergePatientsIdentifiers"><xs:sequence><xs:element maxOccurs="unbounded" minOccurs="0" name="MergePatientsIdentifiers" nillable="true" type="tns:MergePatientsIdentifiers"/></xs:sequence></xs:complexType><xs:element name="ArrayOfMergePatientsIdentifiers" nillable="true" type="tns:ArrayOfMergePatientsIdentifiers"/><xs:complexType name="MergePatientsIdentifiers"><xs:sequence><xs:element minOccurs="0" name="Identifier" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="IdentifierType" nillable="true" type="xs:string"/></xs:sequence></xs:complexType><xs:element name="MergePatientsIdentifiers" nillable="true" type="tns:MergePatientsIdentifiers"/><xs:complexType name="RegisterRejectedPatientDetailsRequest"><xs:sequence><xs:element minOccurs="0" name="MessageID" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="MessageType" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="PatientID" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="PatientName" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="RFNO" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="RawRequestData" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="RawResponseData" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="SendingApp" nillable="true" type="xs:string"/></xs:sequence></xs:complexType><xs:element name="RegisterRejectedPatientDetailsRequest" nillable="true" type="tns:RegisterRejectedPatientDetailsRequest"/><xs:complexType name="UpdateStockDetails"><xs:sequence><xs:element minOccurs="0" name="MessageID" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="MessageType" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="SendingApplication" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="UnitDetails" nillable="true" type="tns:ArrayOfUnitDetails"/></xs:sequence></xs:complexType><xs:element name="UpdateStockDetails" nillable="true" type="tns:UpdateStockDetails"/><xs:complexType name="ArrayOfUnitDetails"><xs:sequence><xs:element maxOccurs="unbounded" minOccurs="0" name="UnitDetails" nillable="true" type="tns:UnitDetails"/></xs:sequence></xs:complexType><xs:element name="ArrayOfUnitDetails" nillable="true" type="tns:ArrayOfUnitDetails"/><xs:complexType name="UnitDetails"><xs:sequence><xs:element minOccurs="0" name="Action" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="FateStatus" type="xs:int"/><xs:element minOccurs="0" name="LocationCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="PatientDetail" nillable="true" type="tns:PatientDetail"/><xs:element minOccurs="0" name="ReasonOfStockMovement" type="xs:int"/><xs:element minOccurs="0" name="UnitCondition" type="xs:int"/><xs:element minOccurs="0" name="UnitNumber" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="UnitProductCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="UpdationDate" type="xs:dateTime"/><xs:element minOccurs="0" name="User" nillable="true" type="xs:string"/></xs:sequence></xs:complexType><xs:element name="UnitDetails" nillable="true" type="tns:UnitDetails"/><xs:complexType name="PatientDetail"><xs:sequence><xs:element minOccurs="0" name="NHSNumber" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="PASNumber" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="PatientDOB" type="xs:dateTime"/><xs:element minOccurs="0" name="PatientFirstName" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="PatientGender" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="PatientLastName" nillable="true" type="xs:string"/></xs:sequence></xs:complexType><xs:element name="PatientDetail" nillable="true" type="tns:PatientDetail"/><xs:complexType name="UpdateStockResponse"><xs:sequence><xs:element minOccurs="0" name="MessageID" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="MessageType" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="SendingApplication" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="UnitDetails" nillable="true" type="tns:ArrayOfUnitResponse"/></xs:sequence></xs:complexType><xs:element name="UpdateStockResponse" nillable="true" type="tns:UpdateStockResponse"/><xs:complexType name="ArrayOfUnitResponse"><xs:sequence><xs:element maxOccurs="unbounded" minOccurs="0" name="UnitResponse" nillable="true" type="tns:UnitResponse"/></xs:sequence></xs:complexType><xs:element name="ArrayOfUnitResponse" nillable="true" type="tns:ArrayOfUnitResponse"/><xs:complexType name="UnitResponse"><xs:sequence><xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="UnitNumber" nillable="true" type="xs:string"/></xs:sequence></xs:complexType><xs:element name="UnitResponse" nillable="true" type="tns:UnitResponse"/><xs:complexType name="PatientIdentityQuery"><xs:sequence><xs:element minOccurs="0" name="MessageID" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="MessageType" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Patient" nillable="true" type="tns:PatientDetail"/><xs:element minOccurs="0" name="SendingApplication" nillable="true" type="xs:string"/></xs:sequence></xs:complexType><xs:element name="PatientIdentityQuery" nillable="true" type="tns:PatientIdentityQuery"/><xs:complexType name="PatientIdentityResponse"><xs:sequence><xs:element minOccurs="0" name="MessageID" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="MessageType" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="PatientCount" type="xs:int"/><xs:element minOccurs="0" name="PatientDetails" nillable="true" type="tns:ArrayOfPatientDetail"/><xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="SendingApplication" nillable="true" type="xs:string"/></xs:sequence></xs:complexType><xs:element name="PatientIdentityResponse" nillable="true" type="tns:PatientIdentityResponse"/><xs:complexType name="ArrayOfPatientDetail"><xs:sequence><xs:element maxOccurs="unbounded" minOccurs="0" name="PatientDetail" nillable="true" type="tns:PatientDetail"/></xs:sequence></xs:complexType><xs:element name="ArrayOfPatientDetail" nillable="true" type="tns:ArrayOfPatientDetail"/><xs:complexType name="ReturnToStockRequest"><xs:sequence><xs:element minOccurs="0" name="MessageID" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="MessageType" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="SendingApplication" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="UnitDetailsRs" nillable="true" type="tns:ArrayOfUnitDetailsRS"/></xs:sequence></xs:complexType><xs:element name="ReturnToStockRequest" nillable="true" type="tns:ReturnToStockRequest"/><xs:complexType name="ArrayOfUnitDetailsRS"><xs:sequence><xs:element maxOccurs="unbounded" minOccurs="0" name="UnitDetailsRS" nillable="true" type="tns:UnitDetailsRS"/></xs:sequence></xs:complexType><xs:element name="ArrayOfUnitDetailsRS" nillable="true" type="tns:ArrayOfUnitDetailsRS"/><xs:complexType name="UnitDetailsRS"><xs:sequence><xs:element minOccurs="0" name="LocationCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Status" type="xs:int"/><xs:element minOccurs="0" name="UnitCondition" type="xs:int"/><xs:element minOccurs="0" name="UnitNumber" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="UnitProductCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="User" nillable="true" type="xs:string"/></xs:sequence></xs:complexType><xs:element name="UnitDetailsRS" nillable="true" type="tns:UnitDetailsRS"/><xs:complexType name="ReturnToStockResponse"><xs:sequence><xs:element minOccurs="0" name="MessageID" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="MessageType" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="SendingApplication" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="UnitDetails" nillable="true" type="tns:ArrayOfUnitResponse"/></xs:sequence></xs:complexType><xs:element name="ReturnToStockResponse" nillable="true" type="tns:ReturnToStockResponse"/><xs:complexType name="CrossMatchRequest"><xs:sequence><xs:element minOccurs="0" name="MessageID" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="MessageType" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="SendingApplication" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="UnitDetails" nillable="true" type="tns:ArrayOfUnitDetailsCM"/></xs:sequence></xs:complexType><xs:element name="CrossMatchRequest" nillable="true" type="tns:CrossMatchRequest"/><xs:complexType name="ArrayOfUnitDetailsCM"><xs:sequence><xs:element maxOccurs="unbounded" minOccurs="0" name="UnitDetailsCM" nillable="true" type="tns:UnitDetailsCM"/></xs:sequence></xs:complexType><xs:element name="ArrayOfUnitDetailsCM" nillable="true" type="tns:ArrayOfUnitDetailsCM"/><xs:complexType name="UnitDetailsCM"><xs:sequence><xs:element minOccurs="0" name="UnitNumber" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="UnitProductCode" nillable="true" type="xs:string"/></xs:sequence></xs:complexType><xs:element name="UnitDetailsCM" nillable="true" type="tns:UnitDetailsCM"/><xs:complexType name="CrossMatchResponse"><xs:sequence><xs:element minOccurs="0" name="MessageID" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="MessageType" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="SendingApplication" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="UnitDetails" nillable="true" type="tns:ArrayOfUnitResponseXM"/></xs:sequence></xs:complexType><xs:element name="CrossMatchResponse" nillable="true" type="tns:CrossMatchResponse"/><xs:complexType name="ArrayOfUnitResponseXM"><xs:sequence><xs:element maxOccurs="unbounded" minOccurs="0" name="UnitResponseXM" nillable="true" type="tns:UnitResponseXM"/></xs:sequence></xs:complexType><xs:element name="ArrayOfUnitResponseXM" nillable="true" type="tns:ArrayOfUnitResponseXM"/><xs:complexType name="UnitResponseXM"><xs:sequence><xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="ResponseDetails" nillable="true" type="q1:ArrayOfOutboundObj" xmlns:q1="http://schemas.datacontract.org/2004/07/iLaboratoryBusinessObjects.UIModel.BloodTransfusion"/><xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="UnitNumber" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="UnitStatus" type="xs:int"/></xs:sequence></xs:complexType><xs:element name="UnitResponseXM" nillable="true" type="tns:UnitResponseXM"/><xs:complexType name="RemoteAllocationQuery"><xs:sequence><xs:element minOccurs="0" name="MessageID" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="MessageType" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Patient" nillable="true" type="tns:PatientDetail"/><xs:element minOccurs="0" name="SendingApplication" nillable="true" type="xs:string"/></xs:sequence></xs:complexType><xs:element name="RemoteAllocationQuery" nillable="true" type="tns:RemoteAllocationQuery"/><xs:complexType name="RemoteAllocationResponse"><xs:sequence><xs:element minOccurs="0" name="MessageID" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="MessageType" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="PatientCount" type="xs:int"/><xs:element minOccurs="0" name="PatientDetails" nillable="true" type="tns:ArrayOfRemotePatientDetail"/><xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="SendingApplication" nillable="true" type="xs:string"/></xs:sequence></xs:complexType><xs:element name="RemoteAllocationResponse" nillable="true" type="tns:RemoteAllocationResponse"/><xs:complexType name="ArrayOfRemotePatientDetail"><xs:sequence><xs:element maxOccurs="unbounded" minOccurs="0" name="RemotePatientDetail" nillable="true" type="tns:RemotePatientDetail"/></xs:sequence></xs:complexType><xs:element name="ArrayOfRemotePatientDetail" nillable="true" type="tns:ArrayOfRemotePatientDetail"/><xs:complexType name="RemotePatientDetail"><xs:sequence><xs:element minOccurs="0" name="Patient" nillable="true" type="tns:PatientDetail"/><xs:element minOccurs="0" name="PatientBloodGroup" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="PatientCMV" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="PatientIrradiated" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="RemoteAllocationEligiblityCount" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="RemoteAllocationEligiblityStatus" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="UnitCount" type="xs:int"/><xs:element minOccurs="0" name="UnitNumber" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="UnitProductCode" nillable="true" type="xs:string"/></xs:sequence></xs:complexType><xs:element name="RemotePatientDetail" nillable="true" type="tns:RemotePatientDetail"/><xs:complexType name="ElectronicCrossMatchQuery"><xs:sequence><xs:element minOccurs="0" name="MessageID" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="MessageType" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="SendingApplication" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="UnitDetails" nillable="true" type="tns:UnitDetailsECM"/></xs:sequence></xs:complexType><xs:element name="ElectronicCrossMatchQuery" nillable="true" type="tns:ElectronicCrossMatchQuery"/><xs:complexType name="UnitDetailsECM"><xs:sequence><xs:element minOccurs="0" name="Location" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="Patient" nillable="true" type="tns:PatientDetail"/><xs:element minOccurs="0" name="UnitNumber" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="UnitProductCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="User" nillable="true" type="xs:string"/></xs:sequence></xs:complexType><xs:element name="UnitDetailsECM" nillable="true" type="tns:UnitDetailsECM"/><xs:complexType name="ElectronicCrossMatchResponse"><xs:sequence><xs:element minOccurs="0" name="MessageID" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="MessageType" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="SendingApplication" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="UnitDetails" nillable="true" type="tns:ECMResponse"/></xs:sequence></xs:complexType><xs:element name="ElectronicCrossMatchResponse" nillable="true" type="tns:ElectronicCrossMatchResponse"/><xs:complexType name="ECMResponse"><xs:sequence><xs:element minOccurs="0" name="Result" nillable="true" type="xs:string"/></xs:sequence></xs:complexType><xs:element name="ECMResponse" nillable="true" type="tns:ECMResponse"/><xs:complexType name="StockTransferRequest"><xs:sequence><xs:element minOccurs="0" name="MessageID" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="MessageType" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="SendingApplication" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="UnitDetails" nillable="true" type="tns:UnitDetailsECM"/></xs:sequence></xs:complexType><xs:element name="StockTransferRequest" nillable="true" type="tns:StockTransferRequest"/><xs:complexType name="StockTransferResponse"><xs:sequence><xs:element minOccurs="0" name="MessageID" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="MessageType" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="SendingApplication" nillable="true" type="xs:string"/></xs:sequence></xs:complexType><xs:element name="StockTransferResponse" nillable="true" type="tns:StockTransferResponse"/></xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/iLaboratoryBusinessObjects.UIModel.BloodTransfusion" xmlns:tns="http://schemas.datacontract.org/2004/07/iLaboratoryBusinessObjects.UIModel.BloodTransfusion" xmlns:xs="http://www.w3.org/2001/XMLSchema"><xs:complexType name="ArrayOfOutboundObj"><xs:sequence><xs:element maxOccurs="unbounded" minOccurs="0" name="OutboundObj" nillable="true" type="tns:OutboundObj"/></xs:sequence></xs:complexType><xs:element name="ArrayOfOutboundObj" nillable="true" type="tns:ArrayOfOutboundObj"/><xs:complexType name="OutboundObj"><xs:sequence><xs:element minOccurs="0" name="DereservationDateTime" type="xs:dateTime"/><xs:element minOccurs="0" name="LIMSUnitStatusCode" type="xs:int"/><xs:element minOccurs="0" name="PatientBloodGroup" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="PatientCMVNegative" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="PatientDOB" type="xs:dateTime"/><xs:element minOccurs="0" name="PatientFirstName" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="PatientGender" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="PatientIrradiated" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="PatientLastName" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="PatientNHSNumber" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="PatientPASNumber" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="StatusExpansion" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="StorageLocation" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="UnitBloodGroup" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="UnitCMVNegative" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="UnitExpiryDate" type="xs:dateTime"/><xs:element minOccurs="0" name="UnitIrradiated" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="UnitLotNumber" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="UnitNumber" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="UnitProductCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="UnitStatus" nillable="true" type="xs:string"/></xs:sequence></xs:complexType><xs:element name="OutboundObj" nillable="true" type="tns:OutboundObj"/></xs:schema>
+  </wsdl:types>
+  <wsdl:message name="IInbound_UpdateStock_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStock">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IInbound_StockTransfer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StockTransferResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IInbound_UpdateStock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStockResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IInbound_RegisterRejectedPatientDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterRejectedPatientDetails">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IInbound_CrossMatch_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrossMatch">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IInbound_RegisterMergeDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterMergeDetails">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IInbound_RegisterRejectedOrderDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterRejectedOrderDetailsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IInbound_ReturnToStock_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnToStock">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IInbound_CrossMatch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrossMatchResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IInbound_ReturnToStock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnToStockResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IInbound_RemoteAllocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoteAllocation">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IInbound_ElectronicCrossMatch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ElectronicCrossMatchResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IInbound_RegisterMergeDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterMergeDetailsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IInbound_RegisterRejectedPatientDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterRejectedPatientDetailsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IInbound_PatientDemographics_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PatientDemographicsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IInbound_ElectronicCrossMatch_InputMessage">
+    <wsdl:part name="parameters" element="tns:ElectronicCrossMatch">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IInbound_PatientDemographics_InputMessage">
+    <wsdl:part name="parameters" element="tns:PatientDemographics">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IInbound_RegisterPatientDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterPatientDetails">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IInbound_RegisterOrderDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterOrderDetails">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IInbound_StockTransfer_InputMessage">
+    <wsdl:part name="parameters" element="tns:StockTransfer">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IInbound_RegisterOrderDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterOrderDetailsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IInbound_RegisterPatientDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterPatientDetailsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IInbound_RemoteAllocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoteAllocationResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IInbound_RegisterRejectedOrderDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterRejectedOrderDetails">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="IInbound">
+    <wsdl:operation name="RegisterPatientDetails">
+      <wsdl:input message="tns:IInbound_RegisterPatientDetails_InputMessage" wsaw:Action="http://tempuri.org/Inbound/IInbound/RegisterPatientDetails">
+    </wsdl:input>
+      <wsdl:output message="tns:IInbound_RegisterPatientDetails_OutputMessage" wsaw:Action="http://tempuri.org/Inbound/IInbound/RegisterPatientDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterOrderDetails">
+      <wsdl:input message="tns:IInbound_RegisterOrderDetails_InputMessage" wsaw:Action="http://tempuri.org/Inbound/IInbound/RegisterOrderDetails">
+    </wsdl:input>
+      <wsdl:output message="tns:IInbound_RegisterOrderDetails_OutputMessage" wsaw:Action="http://tempuri.org/Inbound/IInbound/RegisterOrderDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterMergeDetails">
+      <wsdl:input message="tns:IInbound_RegisterMergeDetails_InputMessage" wsaw:Action="http://tempuri.org/Inbound/IInbound/RegisterMergeDetails">
+    </wsdl:input>
+      <wsdl:output message="tns:IInbound_RegisterMergeDetails_OutputMessage" wsaw:Action="http://tempuri.org/Inbound/IInbound/RegisterMergeDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterRejectedPatientDetails">
+      <wsdl:input message="tns:IInbound_RegisterRejectedPatientDetails_InputMessage" wsaw:Action="http://tempuri.org/Inbound/IInbound/RegisterRejectedPatientDetails">
+    </wsdl:input>
+      <wsdl:output message="tns:IInbound_RegisterRejectedPatientDetails_OutputMessage" wsaw:Action="http://tempuri.org/Inbound/IInbound/RegisterRejectedPatientDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterRejectedOrderDetails">
+      <wsdl:input message="tns:IInbound_RegisterRejectedOrderDetails_InputMessage" wsaw:Action="http://tempuri.org/Inbound/IInbound/RegisterRejectedOrderDetails">
+    </wsdl:input>
+      <wsdl:output message="tns:IInbound_RegisterRejectedOrderDetails_OutputMessage" wsaw:Action="http://tempuri.org/Inbound/IInbound/RegisterRejectedOrderDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStock">
+      <wsdl:input message="tns:IInbound_UpdateStock_InputMessage" wsaw:Action="http://tempuri.org/Inbound/IInbound/UpdateStock">
+    </wsdl:input>
+      <wsdl:output message="tns:IInbound_UpdateStock_OutputMessage" wsaw:Action="http://tempuri.org/Inbound/IInbound/UpdateStockResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PatientDemographics">
+      <wsdl:input message="tns:IInbound_PatientDemographics_InputMessage" wsaw:Action="http://tempuri.org/Inbound/IInbound/PatientDemographics">
+    </wsdl:input>
+      <wsdl:output message="tns:IInbound_PatientDemographics_OutputMessage" wsaw:Action="http://tempuri.org/Inbound/IInbound/PatientDemographicsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnToStock">
+      <wsdl:input message="tns:IInbound_ReturnToStock_InputMessage" wsaw:Action="http://tempuri.org/Inbound/IInbound/ReturnToStock">
+    </wsdl:input>
+      <wsdl:output message="tns:IInbound_ReturnToStock_OutputMessage" wsaw:Action="http://tempuri.org/Inbound/IInbound/ReturnToStockResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrossMatch">
+      <wsdl:input message="tns:IInbound_CrossMatch_InputMessage" wsaw:Action="http://tempuri.org/Inbound/IInbound/CrossMatch">
+    </wsdl:input>
+      <wsdl:output message="tns:IInbound_CrossMatch_OutputMessage" wsaw:Action="http://tempuri.org/Inbound/IInbound/CrossMatchResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoteAllocation">
+      <wsdl:input message="tns:IInbound_RemoteAllocation_InputMessage" wsaw:Action="http://tempuri.org/Inbound/IInbound/RemoteAllocation">
+    </wsdl:input>
+      <wsdl:output message="tns:IInbound_RemoteAllocation_OutputMessage" wsaw:Action="http://tempuri.org/Inbound/IInbound/RemoteAllocationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ElectronicCrossMatch">
+      <wsdl:input message="tns:IInbound_ElectronicCrossMatch_InputMessage" wsaw:Action="http://tempuri.org/Inbound/IInbound/ElectronicCrossMatch">
+    </wsdl:input>
+      <wsdl:output message="tns:IInbound_ElectronicCrossMatch_OutputMessage" wsaw:Action="http://tempuri.org/Inbound/IInbound/ElectronicCrossMatchResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StockTransfer">
+      <wsdl:input message="tns:IInbound_StockTransfer_InputMessage" wsaw:Action="http://tempuri.org/Inbound/IInbound/StockTransfer">
+    </wsdl:input>
+      <wsdl:output message="tns:IInbound_StockTransfer_OutputMessage" wsaw:Action="http://tempuri.org/Inbound/IInbound/StockTransferResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IInbound" type="tns:IInbound">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="RegisterPatientDetails">
+      <soap:operation soapAction="http://tempuri.org/Inbound/IInbound/RegisterPatientDetails" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterOrderDetails">
+      <soap:operation soapAction="http://tempuri.org/Inbound/IInbound/RegisterOrderDetails" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterMergeDetails">
+      <soap:operation soapAction="http://tempuri.org/Inbound/IInbound/RegisterMergeDetails" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterRejectedPatientDetails">
+      <soap:operation soapAction="http://tempuri.org/Inbound/IInbound/RegisterRejectedPatientDetails" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterRejectedOrderDetails">
+      <soap:operation soapAction="http://tempuri.org/Inbound/IInbound/RegisterRejectedOrderDetails" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStock">
+      <soap:operation soapAction="http://tempuri.org/Inbound/IInbound/UpdateStock" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PatientDemographics">
+      <soap:operation soapAction="http://tempuri.org/Inbound/IInbound/PatientDemographics" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnToStock">
+      <soap:operation soapAction="http://tempuri.org/Inbound/IInbound/ReturnToStock" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrossMatch">
+      <soap:operation soapAction="http://tempuri.org/Inbound/IInbound/CrossMatch" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoteAllocation">
+      <soap:operation soapAction="http://tempuri.org/Inbound/IInbound/RemoteAllocation" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ElectronicCrossMatch">
+      <soap:operation soapAction="http://tempuri.org/Inbound/IInbound/ElectronicCrossMatch" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StockTransfer">
+      <soap:operation soapAction="http://tempuri.org/Inbound/IInbound/StockTransfer" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Inbound">
+    <wsdl:port name="BasicHttpBinding_IInbound" binding="tns:BasicHttpBinding_IInbound">
+      <soap:address location="http://kela-lims-ap:83/LIMS.Interfaces.WebServices/Inbound.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,58 @@
+MSH|^~\&|LRC1|RW3|APEX|RW3|20100204151329||ORM^O01|0930435404390288|P|2.4|||NE|NE
+PID|1||000000457^^^RW3^PI^RW3~00000173^^^CMMRN^MR^RW3||NEEO-FOUR^TEST^^^MASTR||20100202|M|||Flat 23^Moorside View^^^OR2 7UQ^^HOME^Smallbrook Rd, Sha|||||S|U|||||U||||||||
+PV1|1|I|PR^^^RW3^^^^^||||||NEEO^^^^^^^^^^|UnKnown|||||||^^^^^^^^^^|01|000000457000000001^^^PIMS_INPATIENT|||||||||||||||||||||||||
+ORC|CA|REQ/NHS/007678^LRC1||RWT/S/0000007/2010^|CA||^^^^^R|CP||^^^^^^^^^^||ann^^^^^^^^^^|PR^^^^^^|^^|20190107011038
+OBR|1|REQ/NHS/007678^LRC1|^|FBC^Full blood count(FBC)^^^H|||20190107011038||||||||^^|ann^PR^^^^^^|^^||||||||||^^^^^R|||||||||
+OBX|1|ST|RFNO^Reference (Order) Number|1|F18Ext31037||||||
+OBX|2|ST|PREGNANT^Is patient pregnant|1|N||||||
+OBX|3|DT|SLMP^Lab: Last menstrual period (Apex)^Medtrak||20180524||||||
+OBX|4|ST|CD^Lab: Clinical Details (Apex)^Medtrak||CD Text||||||
+OBX|5|DT|DLT^Lab: Date of Last Test (Apex)^Medtrak||20180524||||||
+OBX|6|CE|STAKER^Lab: Sample taker (Apex)^Medtrak||ST||||||
+OBX|7|CE|RFS^Lab: Reason for smear (Apex)^Medtrak||IUCD||||||
+OBX|8|CE|COP^Lab: Condition of Patient (Apex)^Medtrak||3||||||
+OBX|9|ST|FASTING^Is patient pregnant|1|N||||||
+OBX|10|DT|EDD^Expected Delivery Date^Medtrak||20180706||||||
+OBX|11|ST|LPRD^Lab: Provisional diagnosis^Medtrak||lwrong||||||
+OBX|12|ST|LPRCH^Lab: Resume of clinical history^Medtrak||l||||||
+OBX|13|ST|CLGENDER||M||
+
+
+
+Automated the Lims packages installation and reduced the no of packages to be few and understandable.
+
+Lims Interfaces Session for the Alpha Team
+Lims Interfaces Session for the UK Integration Team
+Lims Interfaces Session for the Lorenzo Integration Team
+
+Made PMEP/HL7 works with the CSCLIMS 1.6 with my full effort and demonstrated to the Business analyst
+and shared the environment to them so that they can move forward and Demonstrated the PMEP and HL7 to the UK Teams
+this was useful for BA's in prepare the FD for DXC Lims version of PMEP and Update FD for the Order Comms Integration.
+
+Even though multiple times I have been instructed to inform the manager that it is waste of time working upon CSCLIMS 1.6/PMEP/HL7 
+during most of the conversations/clarifications with BA , I never lost hope and did not step back and got the informations in bits and pieces working with core developemnt team of Labs and it Alpha members and even gathered information from the Labs beta members to achiev it , combining all the informations available and made the PMEP/HL7 flow worked with CSCLIMS 1.6
+
+Mortuary Label printing functionality for Blocks and Slides 
+
+Lims Interface integration with Lorenzo
+
+Did the POC successfully upon ELK stack 
+Did the POC for Viaduct ETL Process
+Did the POC for Cassandra viaduct trace environment
+DXC LIMS solution for Interface monitoring. Dashboard 
+Prepared documentation work for the above POCs
+
+Demostrated the POC to the UK stakeholders with good feed back
+
+Had 40 Hrs of technical training in SABA cloud (PMPOK and other technical trainings)
+
+Trained a new resource this financial year and groomed him with good attitude and funtional skills in less time
+
+PMEP - Even though struggled a bit because of its spanning across all the the four disciplines delivered around 90 % of the userstories delivered and still fixing up issues.
+CP Order Comms - This user story covered the major Integrations specific functionalities in a single user story (Inbound/Outbound ORM and Outbound ORU) this was demonstrated to the UK team and had good review with some comments , which will be rectified.
+
+Next Level : I am expecting a long awaiting Level change for me as I am gaining more and more experience. (I was Developemnt Lead at IBA unfortunately not getting any levelchange after that)
+
+On site oppurtunity : I was the only member in the Lims team formed previously didnt got an onsite oppurtunity,Except me, all the senior members of the team got the UK opportunity for 1 year, Preference needs to be given to me for any next opportunity.
+
+

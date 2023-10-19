@@ -1,0 +1,3 @@
+deploy.process.instances.LOOKUPDATA=1
+deploy.profiles=DXC_LIMS
+eclipse.preferences.version=1

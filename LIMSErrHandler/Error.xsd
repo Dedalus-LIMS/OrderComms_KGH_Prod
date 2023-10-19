@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.csc.com/Viaduct/Models/error" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.csc.com/Viaduct/Models/error">
+
+    <complexType name="ErrorType">
+    	<sequence>
+    		<element name="process" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="message" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="data" type="string" maxOccurs="1" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="Error" type="tns:ErrorType"></element>
+</schema>

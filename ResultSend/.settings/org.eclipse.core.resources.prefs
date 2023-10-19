@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+encoding//.settings/description.txt=UTF-16
+encoding/ACK_NAK.parserecore=UTF-16
+encoding/AddNewLine.map=UTF-16
+encoding/CHECK_ACK_NAK.rule=UTF-16
+encoding/GenericMsg.parserecore=UTF-16
+encoding/HL7_ORM_O01_1.parserecore=UTF-16
+encoding/HL7_ORU_R01.parserecore=UTF-16
+encoding/PORTLOG.map=UTF-16
+encoding/ResultSend.process=UTF-16
+encoding/ResultSend.process_diagram=UTF-16
+encoding/UpdateFailedStatus.map=UTF-16
+encoding/UpdateSuccessStatus.map=UTF-16

@@ -1,0 +1,7 @@
+deploy.process.instances.ErrorHandler=1
+deploy.process.instances.HealthixErrorHandler=1
+deploy.process.instances.LIMSErrHandler=1
+deploy.process.instances.MortuaryErrHandler=1
+deploy.profiles=DEDALUS_LIMS
+deploy.profiles.connector.DEDALUS_LIMS=Error Queue,LIMS_PROC_ERR_FILE_OUT|
+eclipse.preferences.version=1

@@ -1,0 +1,5 @@
+deploy.process.instances.ResultSend=1
+deploy.profiles=DEDALUS_LIMS
+deploy.profiles.connector.DEDALUS_LIMS=LIMS_ERR_Connector,LIMS_PROC_ERR_PROC_OUT|PORT_LOG,LIMS_PORT_LOG|LIMS_Error_Connector,LIMS_PROC_ERR_PROC_OUT|LIMS_ORU_OB_LOG,LIMS_OB_LOG|LIMS_HL7_ORU_OUT,LIMS_HL7_ALL_OUT|
+deploy.profiles.listeners.DEDALUS_LIMS=LIMS_ORU_HL7_IN_Q
+eclipse.preferences.version=1

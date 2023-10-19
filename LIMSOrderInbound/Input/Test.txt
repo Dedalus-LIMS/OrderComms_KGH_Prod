@@ -1,0 +1,50 @@
+MSH|^~\&|PiMS|ABC|LIMS|ABC|20180302135656||ORM^O01|CASE25NODISP|P|2.4|01||AL|AL|||
+PID|1||6362065824^^^NHS^NH~A10000155^^^RJL^MR||TPSurname05^TPForename05^TPMiddlename05^Suffix^Mr^^NT|MMSurname05^MMForename05^MMMiddleName05^MMSuffix05^Mr^^|19540701000000|F|ALSSurname03^ALSForename03^ALSMiddlename03^Suffix^Mr^^ALSNT||Line1^Line2 ^Line3^County^WA37NU^ENG^HOME^^111|||||||||||British||||||||||
+PD1|||^^P83008|5436|||||||
+PV1||D|||||||||||||||||6362065824|
+ORC|NW||||P||^^^^^|||||CLI^^^^^^^LCC|||
+OBR|1|SPExt5371||K^Potassium^^T^B|P1||20170424121200|||SATO1^^^^^^^LCC|||Clients 01|20170424121200|SST^Serum|Cl1^^^^^^^LCC|||||||||||
+OBX|1|ST|RFNO^Reference (Order) Number|1|F18Ext538||||||
+OBX|2|ST|PREGNANT^Is patient pregnant|1|Y||||||
+OBX|3|ST|SLMP^Lab: Last menstrual period (Apex)^Medtrak||20171201||||||
+OBX|4|ST|EDD^Expected Delivery Date^Medtrak||20171201||||||
+OBX|5|ST|LPRD^Lab: Provisional diagnosis^Medtrak||lwrong||||||
+OBX|6|ST|LPRCH^Lab: Resume of clinical history^Medtrak||l||||||
+OBX|7|TX|CLGENDER||M||
+
+
+
+
+0H|\^&|||RECVID|||||SENDID||P|1|20170828232634
+1P|1|PRN12345|||SURNAME^FORENAME||19691204|M||||||||||||||||||||||||20170828232634
+2C|1|PATIENT^COMMENT|Patient Comment
+3C|1|PATIENT^COMMENT|Patient Comment
+4C|1|PATIENT^COMMENT|Patient Comment
+5O|1|Ext535^JAM/07557|Ext535^JAM/07557|^^^K/^^^L|R||||||||||||||||||||F|||||||
+6C|1|SAMPLE^COMMENT|Order Comment
+7C|1|SAMPLE^COMMENT|Order Comment
+0C|1|SAMPLE^COMMENT|Order Comment
+1R|1|^^^K^Pottasium|4.40|mmol/l||N||F||Operator_ID||20160915170447|809406
+2C|1|HEMATOLOGY^COMMENT|Result Comment
+3C|1|HEMATOLOGY^COMMENT|Result Comment
+4R|1|^^^K^Pottasium|4.40|mmol/l||N||F||Operator_ID||20160915170447|809406
+5C|1|HEMATOLOGY^COMMENT|Result Comment
+6C|1|HEMATOLOGY^COMMENT|Result Comment
+7L|1|N
+
+BS
+
+1 Test
+
+3 Test
+
+1 Prof
+
+2 Prof
+
+6 Test 2 Specimen
+
+6 test 2 Specimen
+
+
+

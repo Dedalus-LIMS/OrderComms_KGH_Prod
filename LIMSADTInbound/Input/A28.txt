@@ -1,0 +1,6 @@
+MSH|^~\&|PiMS|ABC|LIMS|ABC|20161215135656||ADT^A28|20161220041|P|2.4|01||AL|AL|||
+EVN||20161215135656||||
+PID|1||3711122233^^^NHS^NH~A10000001^^^RJL^MR||TPSurname01^TPForename01^TPMiddlename01^Suffix^Er^^NT|MMSurname01^MMForename01^MMMiddleName01^MMSuffix01^Mr^^|19760701000000|M|ALSSurname01^ALSForename01^ALSMiddlename01^Suffix^Mr^^ALSNT||Line1^Line2 ^Line3^County^WA37NU^ENG^HOME^^111|||||||||||British||||||||||
+PD1|||^^P83008|5432|||||||
+PV1||D|||||||||||||||||11122233|
+OBX||TX|CLGENDER||M||

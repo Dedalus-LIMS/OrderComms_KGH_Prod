@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions name="Inbound" targetNamespace="http://tempuri.org/Inbound" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/Inbound" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<wsdl:types>
+		<xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/Inbound" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+			<xs:import namespace="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/>
+			<xs:element name="RegisterPatientDetails">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="request" nillable="true" type="q1:RegisterPatientDetailsRequest" xmlns:q1="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="RegisterPatientDetailsResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="RegisterPatientDetailsResult" nillable="true" type="q2:InboundResponse" xmlns:q2="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="RegisterOrderDetails">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="request" nillable="true" type="q3:OrderEntryDetailsRequest" xmlns:q3="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="RegisterOrderDetailsResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="RegisterOrderDetailsResult" nillable="true" type="q4:InboundResponse" xmlns:q4="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="RegisterMergeDetails">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="request" nillable="true" type="q5:MergePatientDetailsRequest" xmlns:q5="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="RegisterMergeDetailsResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="RegisterMergeDetailsResult" nillable="true" type="q6:InboundResponse" xmlns:q6="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+		<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+			<xs:element name="anyType" nillable="true" type="xs:anyType"/>
+			<xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+			<xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+			<xs:element name="boolean" nillable="true" type="xs:boolean"/>
+			<xs:element name="byte" nillable="true" type="xs:byte"/>
+			<xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+			<xs:element name="decimal" nillable="true" type="xs:decimal"/>
+			<xs:element name="double" nillable="true" type="xs:double"/>
+			<xs:element name="float" nillable="true" type="xs:float"/>
+			<xs:element name="int" nillable="true" type="xs:int"/>
+			<xs:element name="long" nillable="true" type="xs:long"/>
+			<xs:element name="QName" nillable="true" type="xs:QName"/>
+			<xs:element name="short" nillable="true" type="xs:short"/>
+			<xs:element name="string" nillable="true" type="xs:string"/>
+			<xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+			<xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+			<xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+			<xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+			<xs:element name="char" nillable="true" type="tns:char"/>
+			<xs:simpleType name="char">
+				<xs:restriction base="xs:int"/>
+			</xs:simpleType>
+			<xs:element name="duration" nillable="true" type="tns:duration"/>
+			<xs:simpleType name="duration">
+				<xs:restriction base="xs:duration">
+					<xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+					<xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+					<xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:element name="guid" nillable="true" type="tns:guid"/>
+			<xs:simpleType name="guid">
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:attribute name="FactoryType" type="xs:QName"/>
+			<xs:attribute name="Id" type="xs:ID"/>
+			<xs:attribute name="Ref" type="xs:IDREF"/>
+		</xs:schema>
+		<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/LIMS.Interfaces.WebServices">
+			<xs:import namespace="http://schemas.datacontract.org/2004/07/iLaboratoryBusinessObjects.Shared"/>
+			<xs:complexType name="RegisterPatientDetailsRequest">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="MessageID" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="MessageType" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="RawRequestData" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="RawResponseData" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="RegisterPatientDetails" nillable="true" type="q1:Patient" xmlns:q1="http://schemas.datacontract.org/2004/07/iLaboratoryBusinessObjects.Shared"/>
+					<xs:element minOccurs="0" name="SendingApp" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="RegisterPatientDetailsRequest" nillable="true" type="tns:RegisterPatientDetailsRequest"/>
+			<xs:complexType name="InboundResponse">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Message" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="MessageID" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="MessageType" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Status" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="InboundResponse" nillable="true" type="tns:InboundResponse"/>
+			<xs:complexType name="OrderEntryDetailsRequest">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="MessageID" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="MessageType" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="OrderEntryDetails" nillable="true" type="tns:ArrayOfOrderEntry"/>
+					<xs:element minOccurs="0" name="RawRequestData" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="RawResponseData" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="RegisterPatientDetails" nillable="true" type="q2:Patient" xmlns:q2="http://schemas.datacontract.org/2004/07/iLaboratoryBusinessObjects.Shared"/>
+					<xs:element minOccurs="0" name="SendingApp" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OrderEntryDetailsRequest" nillable="true" type="tns:OrderEntryDetailsRequest"/>
+			<xs:complexType name="ArrayOfOrderEntry">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="OrderEntry" nillable="true" type="tns:OrderEntry"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfOrderEntry" nillable="true" type="tns:ArrayOfOrderEntry"/>
+			<xs:complexType name="OrderEntry">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="COP" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Category" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="ClinicalComment" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="ClinicalDiagnosis" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="DateOfLastTest" type="xs:dateTime"/>
+					<xs:element minOccurs="0" name="Discipline" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="EDD" type="xs:dateTime"/>
+					<xs:element minOccurs="0" name="IOE_CollectionDatetime" type="xs:dateTime"/>
+					<xs:element minOccurs="0" name="IOE_OrderDatetime" type="xs:dateTime"/>
+					<xs:element minOccurs="0" name="IOE_SampleTaker" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="IOE_Status" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="LMP" type="xs:dateTime"/>
+					<xs:element minOccurs="0" name="Location" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="NewFlag" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="OrderComments" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="OrderNumber" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Pregnant" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="ReasonForSmear" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="RequestingClinician" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="RequestingLocation" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Specimen" nillable="true" type="tns:ArrayOfSpecimenEntry"/>
+					<xs:element minOccurs="0" name="StatusCode" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="SubDiscipline" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OrderEntry" nillable="true" type="tns:OrderEntry"/>
+			<xs:complexType name="ArrayOfSpecimenEntry">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="SpecimenEntry" nillable="true" type="tns:SpecimenEntry"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfSpecimenEntry" nillable="true" type="tns:ArrayOfSpecimenEntry"/>
+			<xs:complexType name="SpecimenEntry">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="CollectionDateTime" type="xs:dateTime"/>
+					<xs:element minOccurs="0" name="Discipline" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Fasting" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="NoofTubes" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Priority" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="ReceivedDateTime" type="xs:dateTime"/>
+					<xs:element minOccurs="0" name="SampleNumber" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="SampleTaker" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="SpecimenComments" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="SpecimenType" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="StatusCode" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="SubDiscipline" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Tests" nillable="true" type="tns:ArrayOfOrderTest"/>
+					<xs:element minOccurs="0" name="Volume" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="SpecimenEntry" nillable="true" type="tns:SpecimenEntry"/>
+			<xs:complexType name="ArrayOfOrderTest">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="OrderTest" nillable="true" type="tns:OrderTest"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfOrderTest" nillable="true" type="tns:ArrayOfOrderTest"/>
+			<xs:complexType name="OrderTest">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Code" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="CollectionDateTime" type="xs:dateTime"/>
+					<xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Discipline" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Fasting" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="NoofTubes" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Priority" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="ReceivedDateTime" type="xs:dateTime"/>
+					<xs:element minOccurs="0" name="SampleNumber" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="SampleTaker" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="SpecimenComments" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="SpecimenType" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="StatusCode" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="SubDiscipline" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="TestOrSet" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Volume" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OrderTest" nillable="true" type="tns:OrderTest"/>
+			<xs:complexType name="MergePatientDetailsRequest">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="MergePrimaryPatientsIdentifiers" nillable="true" type="tns:ArrayOfMergePatientsIdentifiers"/>
+					<xs:element minOccurs="0" name="MergeSecondaryPatientsIdentifiers" nillable="true" type="tns:ArrayOfMergePatientsIdentifiers"/>
+					<xs:element minOccurs="0" name="MessageID" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="MessageType" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="SendingApp" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Status" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="isFromInterface" type="xs:boolean"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="MergePatientDetailsRequest" nillable="true" type="tns:MergePatientDetailsRequest"/>
+			<xs:complexType name="ArrayOfMergePatientsIdentifiers">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="MergePatientsIdentifiers" nillable="true" type="tns:MergePatientsIdentifiers"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfMergePatientsIdentifiers" nillable="true" type="tns:ArrayOfMergePatientsIdentifiers"/>
+			<xs:complexType name="MergePatientsIdentifiers">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Identifier" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="IdentifierType" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="MergePatientsIdentifiers" nillable="true" type="tns:MergePatientsIdentifiers"/>
+		</xs:schema>
+		<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/iLaboratoryBusinessObjects.Shared" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/iLaboratoryBusinessObjects.Shared">
+			<xs:complexType name="Patient">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Address" nillable="true" type="tns:ArrayOfAddress"/>
+					<xs:element minOccurs="0" name="AkaNames" nillable="true" type="tns:ArrayOfPatientAkaDetails"/>
+					<xs:element minOccurs="0" name="AliasName" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Ancillary" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="ClinicianId" type="xs:int"/>
+					<xs:element minOccurs="0" name="ColdAgglutinins" type="xs:boolean"/>
+					<xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="ConfirmedBloodGroup" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="ConfirmedBloodGroupID" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="DateOfBirth" type="xs:dateTime"/>
+					<xs:element minOccurs="0" name="DateOfDeath" nillable="true" type="xs:dateTime"/>
+					<xs:element minOccurs="0" name="Email" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Ethnicity" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="EthnicityGroupID" type="xs:int"/>
+					<xs:element minOccurs="0" name="EthnicityID" type="xs:int"/>
+					<xs:element minOccurs="0" name="FamilyName" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="GenderCode" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="GenderID" type="xs:int"/>
+					<xs:element minOccurs="0" name="GivenName" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="HasOpenOrders" type="xs:boolean"/>
+					<xs:element minOccurs="0" name="HazardID" type="xs:int"/>
+					<xs:element minOccurs="0" name="HighRisk" type="xs:boolean"/>
+					<xs:element minOccurs="0" name="Home" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="ID" type="xs:int"/>
+					<xs:element minOccurs="0" name="ILabID" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="LabSystem" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="LegacyPatientID" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="LocationId" type="xs:int"/>
+					<xs:element minOccurs="0" name="MaidenName" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="MiddleName" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Mobile" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="NHSNumber" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="OrderDetails" nillable="true" type="tns:ArrayOfOrderDetails"/>
+					<xs:element minOccurs="0" name="PASNumber" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="PatientCategoryID" type="xs:int"/>
+					<xs:element minOccurs="0" name="PatientIdentifiedAntibody" nillable="true" type="tns:ArrayOfPatientIdentifiedAntibody"/>
+					<xs:element minOccurs="0" name="PatientIdentifiers" nillable="true" type="tns:ArrayOfPatientIdentifiers"/>
+					<xs:element minOccurs="0" name="PatientNotes" nillable="true" type="tns:ArrayOfPatientNotesDetail"/>
+					<xs:element minOccurs="0" name="PenicillinAllergy" type="xs:boolean"/>
+					<xs:element minOccurs="0" name="PriorityId" type="xs:int"/>
+					<xs:element minOccurs="0" name="ProvisionalBloodGroup" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="ProvisionalBloodGroupID" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="RegisteredGP" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="RegisteredGPID" type="xs:int"/>
+					<xs:element minOccurs="0" name="Sex" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="SexCode" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="SexID" type="xs:int"/>
+					<xs:element minOccurs="0" name="SolidOrganTransplant" type="xs:boolean"/>
+					<xs:element minOccurs="0" name="Specialrequirement" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Suffix" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Title" type="xs:int"/>
+					<xs:element minOccurs="0" name="TitleCode" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="TitleExp" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="WorkExtn" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="WorkNumber" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="isAntibodyScreening" type="xs:boolean"/>
+					<xs:element minOccurs="0" name="isMerged" type="xs:boolean"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="Patient" nillable="true" type="tns:Patient"/>
+			<xs:complexType name="ArrayOfAddress">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="Address" nillable="true" type="tns:Address"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfAddress" nillable="true" type="tns:ArrayOfAddress"/>
+			<xs:complexType name="Address">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="City" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Country" type="xs:int"/>
+					<xs:element minOccurs="0" name="CountryExpansion" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="ID" type="xs:int"/>
+					<xs:element minOccurs="0" name="Line1" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Line2" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Line3" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="PatientID" type="xs:int"/>
+					<xs:element minOccurs="0" name="Postcode" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Type" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="Address" nillable="true" type="tns:Address"/>
+			<xs:complexType name="ArrayOfPatientAkaDetails">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="PatientAkaDetails" nillable="true" type="tns:PatientAkaDetails"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfPatientAkaDetails" nillable="true" type="tns:ArrayOfPatientAkaDetails"/>
+			<xs:complexType name="PatientAkaDetails">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Active" type="xs:boolean"/>
+					<xs:element minOccurs="0" name="FamilyName" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="GivenName" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="ID" type="xs:int"/>
+					<xs:element minOccurs="0" name="PatientID" type="xs:int"/>
+					<xs:element minOccurs="0" name="SecondaryPatientID" type="xs:int"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="PatientAkaDetails" nillable="true" type="tns:PatientAkaDetails"/>
+			<xs:complexType name="ArrayOfOrderDetails">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="OrderDetails" nillable="true" type="tns:OrderDetails"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfOrderDetails" nillable="true" type="tns:ArrayOfOrderDetails"/>
+			<xs:complexType name="OrderDetails">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Clinician" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="CollectionDate" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="CollectionTime" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="DisciplineID" type="xs:int"/>
+					<xs:element minOccurs="0" name="LRN" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="LegacySpecimenID" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Location" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="OrderDate" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="OrderNumber" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="OrderPatientID" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="OrderStatus" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="OrderTime" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Priority" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="ReceivedDate" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="ReceivedTime" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="SharedOrderID" type="xs:int"/>
+					<xs:element minOccurs="0" name="SourceNextGen" type="xs:boolean"/>
+					<xs:element minOccurs="0" name="Specimen" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="System" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="TestExpansion" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="isApproxCollection" type="xs:boolean"/>
+					<xs:element minOccurs="0" name="isApproxReceived" type="xs:boolean"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="OrderDetails" nillable="true" type="tns:OrderDetails"/>
+			<xs:complexType name="ArrayOfPatientIdentifiedAntibody">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="PatientIdentifiedAntibody" nillable="true" type="tns:PatientIdentifiedAntibody"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfPatientIdentifiedAntibody" nillable="true" type="tns:ArrayOfPatientIdentifiedAntibody"/>
+			<xs:complexType name="PatientIdentifiedAntibody">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Active" type="xs:boolean"/>
+					<xs:element minOccurs="0" name="AddToPatient" type="xs:boolean"/>
+					<xs:element minOccurs="0" name="AntibodiesID" type="xs:int"/>
+					<xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="ID" type="xs:int"/>
+					<xs:element minOccurs="0" name="PatientID" type="xs:int"/>
+					<xs:element minOccurs="0" name="StatusCode" type="xs:int"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="PatientIdentifiedAntibody" nillable="true" type="tns:PatientIdentifiedAntibody"/>
+			<xs:complexType name="ArrayOfPatientIdentifiers">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="PatientIdentifiers" nillable="true" type="tns:PatientIdentifiers"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfPatientIdentifiers" nillable="true" type="tns:ArrayOfPatientIdentifiers"/>
+			<xs:complexType name="PatientIdentifiers">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Active" type="xs:boolean"/>
+					<xs:element minOccurs="0" name="Code" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="Expansion" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="ID" type="xs:int"/>
+					<xs:element minOccurs="0" name="Identifier" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="IdentifierID" type="xs:int"/>
+					<xs:element minOccurs="0" name="MainIdentifier" type="xs:boolean"/>
+					<xs:element minOccurs="0" name="PatientID" type="xs:int"/>
+					<xs:element minOccurs="0" name="SecondaryPatientID" type="xs:int"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="PatientIdentifiers" nillable="true" type="tns:PatientIdentifiers"/>
+			<xs:complexType name="ArrayOfPatientNotesDetail">
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="unbounded" name="PatientNotesDetail" nillable="true" type="tns:PatientNotesDetail"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ArrayOfPatientNotesDetail" nillable="true" type="tns:ArrayOfPatientNotesDetail"/>
+			<xs:complexType name="PatientNotesDetail">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Active" type="xs:boolean"/>
+					<xs:element minOccurs="0" name="DateTime" type="xs:dateTime"/>
+					<xs:element minOccurs="0" name="ID" type="xs:int"/>
+					<xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="PatientID" type="xs:int"/>
+					<xs:element minOccurs="0" name="SecondaryPatientID" type="xs:int"/>
+					<xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string"/>
+					<xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="PatientNotesDetail" nillable="true" type="tns:PatientNotesDetail"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="IInbound_RegisterPatientDetails_InputMessage">
+		<wsdl:part name="parameters" element="tns:RegisterPatientDetails"/>
+	</wsdl:message>
+	<wsdl:message name="IInbound_RegisterPatientDetails_OutputMessage">
+		<wsdl:part name="parameters" element="tns:RegisterPatientDetailsResponse"/>
+	</wsdl:message>
+	<wsdl:message name="IInbound_RegisterOrderDetails_InputMessage">
+		<wsdl:part name="parameters" element="tns:RegisterOrderDetails"/>
+	</wsdl:message>
+	<wsdl:message name="IInbound_RegisterOrderDetails_OutputMessage">
+		<wsdl:part name="parameters" element="tns:RegisterOrderDetailsResponse"/>
+	</wsdl:message>
+	<wsdl:message name="IInbound_RegisterMergeDetails_InputMessage">
+		<wsdl:part name="parameters" element="tns:RegisterMergeDetails"/>
+	</wsdl:message>
+	<wsdl:message name="IInbound_RegisterMergeDetails_OutputMessage">
+		<wsdl:part name="parameters" element="tns:RegisterMergeDetailsResponse"/>
+	</wsdl:message>
+	<wsdl:portType name="IInbound">
+		<wsdl:operation name="RegisterPatientDetails">
+			<wsdl:input wsaw:Action="http://tempuri.org/Inbound/IInbound/RegisterPatientDetails" message="tns:IInbound_RegisterPatientDetails_InputMessage"/>
+			<wsdl:output wsaw:Action="http://tempuri.org/Inbound/IInbound/RegisterPatientDetailsResponse" message="tns:IInbound_RegisterPatientDetails_OutputMessage"/>
+		</wsdl:operation>
+		<wsdl:operation name="RegisterOrderDetails">
+			<wsdl:input wsaw:Action="http://tempuri.org/Inbound/IInbound/RegisterOrderDetails" message="tns:IInbound_RegisterOrderDetails_InputMessage"/>
+			<wsdl:output wsaw:Action="http://tempuri.org/Inbound/IInbound/RegisterOrderDetailsResponse" message="tns:IInbound_RegisterOrderDetails_OutputMessage"/>
+		</wsdl:operation>
+		<wsdl:operation name="RegisterMergeDetails">
+			<wsdl:input wsaw:Action="http://tempuri.org/Inbound/IInbound/RegisterMergeDetails" message="tns:IInbound_RegisterMergeDetails_InputMessage"/>
+			<wsdl:output wsaw:Action="http://tempuri.org/Inbound/IInbound/RegisterMergeDetailsResponse" message="tns:IInbound_RegisterMergeDetails_OutputMessage"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="BasicHttpBinding_IInbound" type="tns:IInbound">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="RegisterPatientDetails">
+			<soap:operation soapAction="http://tempuri.org/Inbound/IInbound/RegisterPatientDetails" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="RegisterOrderDetails">
+			<soap:operation soapAction="http://tempuri.org/Inbound/IInbound/RegisterOrderDetails" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="RegisterMergeDetails">
+			<soap:operation soapAction="http://tempuri.org/Inbound/IInbound/RegisterMergeDetails" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="Inbound">
+		<wsdl:port name="BasicHttpBinding_IInbound" binding="tns:BasicHttpBinding_IInbound">
+			<soap:address location="http://localhost/LIMS.Interfaces.WebServices/Inbound.svc"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
